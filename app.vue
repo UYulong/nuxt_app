@@ -1,10 +1,11 @@
 <template>
   <NConfigProvider inline-theme-disabled>
-    <n-button type="primary">
-      Primary
-    </n-button>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </NConfigProvider>
 </template>
 
 <script setup>
+import { NConfigProvider } from 'naive-ui'
 </script>

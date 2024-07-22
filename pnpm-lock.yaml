@@ -8,15 +8,18 @@ importers:
 
   .:
     dependencies:
+      '@css-render/vue3-ssr':
+        specifier: ^0.15.14
+        version: 0.15.14(vue@3.4.33)
+      '@vicons/ionicons5':
+        specifier: ^0.12.0
+        version: 0.12.0
       naive-ui:
         specifier: ^2.39.0
         version: 2.39.0(vue@3.4.33)
       nuxt:
         specifier: ^3.12.4
         version: 3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.11)(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.19.0)(terser@5.31.3)(vite@5.3.4(@types/node@20.14.11)(terser@5.31.3))
-      nuxtjs-naive-ui:
-        specifier: ^1.0.2
-        version: 1.0.2(magicast@0.3.4)(rollup@4.19.0)(vue@3.4.33)
       vue:
         specifier: latest
         version: 3.4.33
@@ -1049,6 +1052,9 @@ packages:
     resolution: {integrity: sha512-NHxohEqad6Ra/r4lGknO52uc/GrWILXAMs1BB4401GTqww0fw1bAqzpG1XHuDO+dprg4GvsD9ZLLSsdo78p9hQ==}
     engines: {node: '>=16'}
     hasBin: true
+
+  '@vicons/ionicons5@0.12.0':
+    resolution: {integrity: sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA==}
 
   '@vitejs/plugin-vue-jsx@4.0.0':
     resolution: {integrity: sha512-A+6wL2AdQhDsLsDnY+2v4rRDI1HLJGIMc97a8FURO9tqKsH5QvjWrzsa5DH3NlZsM742W2wODl2fF+bfcTWtXw==}
@@ -2364,9 +2370,6 @@ packages:
         optional: true
       '@types/node':
         optional: true
-
-  nuxtjs-naive-ui@1.0.2:
-    resolution: {integrity: sha512-qJ5ZKTEQieNaSNJFHdRCCz9SOLRB7Rg0vwzFJe64WYKt+SzDM2sQ7ZXj2raJzyIPBtKInQv6yDo2vvSBsLiUHA==}
 
   nypm@0.3.9:
     resolution: {integrity: sha512-BI2SdqqTHg2d4wJh8P9A1W+bslg33vOE9IZDY6eR2QC+Pu1iNBVZUqczrd43rJb+fMzHU7ltAYKsEFY/kHMFcw==}
@@ -4409,6 +4412,8 @@ snapshots:
       - encoding
       - supports-color
 
+  '@vicons/ionicons5@0.12.0': {}
+
   '@vitejs/plugin-vue-jsx@4.0.0(vite@5.3.4(@types/node@20.14.11)(terser@5.31.3))(vue@3.4.33)':
     dependencies:
       '@babel/core': 7.24.9
@@ -6026,16 +6031,6 @@ snapshots:
       - vti
       - vue-tsc
       - xml2js
-
-  nuxtjs-naive-ui@1.0.2(magicast@0.3.4)(rollup@4.19.0)(vue@3.4.33):
-    dependencies:
-      '@css-render/vue3-ssr': 0.15.14(vue@3.4.33)
-      '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
-    transitivePeerDependencies:
-      - magicast
-      - rollup
-      - supports-color
-      - vue
 
   nypm@0.3.9:
     dependencies:
