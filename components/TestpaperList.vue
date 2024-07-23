@@ -19,6 +19,8 @@
 </template>
 
 <script setup>
+import { createDiscreteApi } from 'naive-ui';
+
 defineOptions({
   name: 'TestpaperList',
 });
