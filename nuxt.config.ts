@@ -1,7 +1,7 @@
-// import AutoImport from 'unplugin-auto-import/vite'
-// import Components from 'unplugin-vue-components/vite'
-// import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
-// "nuxtjs-naive-ui",
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
 
@@ -28,6 +28,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  // "nuxtjs-naive-ui" 会覆盖 plugins/naive-ui.ts
   modules: ['nuxt-windicss'],
 
   css: [
@@ -40,7 +41,25 @@ export default defineNuxtConfig({
         process.env.NODE_ENV === 'development'
           ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
           : []
-    }
+    },
+
+    plugins: [
+      AutoImport({
+        imports: [
+          {
+            'naive-ui': [
+              'useDialog',
+              'useMessage',
+              'useNotification',
+              'useLoadingBar'
+            ]
+          }
+        ]
+      }),
+      Components({
+        resolvers: [NaiveUiResolver()]
+      })
+    ]
   },
 
   build: {
@@ -54,23 +73,5 @@ export default defineNuxtConfig({
         ]
         : ['@juggle/resize-observer']
   },
-  // vite: {
-  //   plugins: [
-  //     AutoImport({
-  //       imports: [
-  //         {
-  //           'naive-ui': [
-  //             'useDialog',
-  //             'useMessage',
-  //             'useNotification',
-  //             'useLoadingBar'
-  //           ]
-  //         }
-  //       ]
-  //     }),
-  //     Components({
-  //       resolvers: [NaiveUiResolver()]
-  //     })
-  //   ]
-  // }
+
 })

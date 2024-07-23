@@ -37,13 +37,6 @@
 import {
   Search
 } from "@vicons/ionicons5"
-import {
-  NButton,
-  NIcon,
-  NDropdown,
-  NAvatar,
-  createDiscreteApi
-} from "naive-ui"
 
 // const user = useUser()
 const user = true

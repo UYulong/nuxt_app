@@ -13,13 +13,6 @@
 </template>
 
 <script setup>
-import {
-  NDrawer,
-  NInputGroup,
-  NInput,
-  NButton
-} from "naive-ui"
-
 defineOptions({
   name: 'SearchBar'
 })
