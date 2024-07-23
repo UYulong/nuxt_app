@@ -14,46 +14,48 @@
 
 <script setup>
 defineOptions({
-  name: 'SearchBar'
-})
+  name: 'SearchBar',
+});
 
-const drawer = ref(false)
-const keyword = ref("")
+const drawer = ref(false);
+const keyword = ref('');
 
 const open = () => {
-  keyword.value = ""
-  drawer.value = true
-}
+  keyword.value = '';
+  drawer.value = true;
+};
 
-const close = () => drawer.value = false
+const close = () => (drawer.value = false);
 
 const handleSearch = () => {
   setTimeout(() => {
-    close()
-  }, 100)
+    close();
+  }, 100);
 
   navigateTo({
-    name: "search-type-page",
+    name: 'search-type-page',
     params: {
-      type: "course",
-      page: 1
+      type: 'course',
+      page: 1,
     },
     query: {
-      keyword: keyword.value
-    }
-  })
-}
+      keyword: keyword.value,
+    },
+  });
+};
 
 function handleEnterEvent(e) {
-  if (e.key === "Enter" && keyword.value) {
-    handleSearch()
+  if (e.key === 'Enter' && keyword.value) {
+    handleSearch();
   }
 }
 
-const addKeydownEvent = () => document.addEventListener("keydown", handleEnterEvent)
-const removeKeydownEvent = () => document.removeEventListener("keydown", handleEnterEvent)
+const addKeydownEvent = () =>
+  document.addEventListener('keydown', handleEnterEvent);
+const removeKeydownEvent = () =>
+  document.removeEventListener('keydown', handleEnterEvent);
 
 defineExpose({
-  open
-})
+  open,
+});
 </script>

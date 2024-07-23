@@ -35,6 +35,10 @@ export default defineNuxtConfig({
     "@/assets/main.css"
   ],
 
+  imports: {
+    dirs: ["apis"]
+  },
+
   vite: {
     optimizeDeps: {
       include:

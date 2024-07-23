@@ -1,14 +1,19 @@
 <template>
   <div class="body">
     <NavBar />
-    Layouts
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <PageFooter />
   </div>
 </template>
 
 <script lang="ts" setup>
 defineOptions({
-  name: 'Layouts'
-})
+  name: 'Layouts',
+});
 </script>
 
 <style>
