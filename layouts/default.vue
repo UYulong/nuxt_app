@@ -10,12 +10,6 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-defineOptions({
-  name: 'Layouts',
-});
-</script>
-
 <style>
 .body {
   min-width: 1000px;

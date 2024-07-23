@@ -1,10 +1,25 @@
 <template>
-  <n-drawer v-model:show="drawer" placement="top" :on-after-enter="addKeydownEvent"
-    :on-after-leave="removeKeydownEvent">
+  <n-drawer
+    v-model:show="drawer"
+    placement="top"
+    :on-after-enter="addKeydownEvent"
+    :on-after-leave="removeKeydownEvent"
+  >
     <div class="h-full flex justify-center items-center">
       <n-input-group class="flex justify-center items-center">
-        <n-input size="large" v-model:value="keyword" placeholder="请输入关键词" :style="{ width: '500px' }" />
-        <n-button size="large" type="primary" ghost :disabled="!keyword" @click="handleSearch">
+        <n-input
+          size="large"
+          v-model:value="keyword"
+          placeholder="请输入关键词"
+          :style="{ width: '500px' }"
+        />
+        <n-button
+          size="large"
+          type="primary"
+          ghost
+          :disabled="!keyword"
+          @click="handleSearch"
+        >
           搜索
         </n-button>
       </n-input-group>
@@ -13,10 +28,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'SearchBar',
-});
-
 const drawer = ref(false);
 const keyword = ref('');
 

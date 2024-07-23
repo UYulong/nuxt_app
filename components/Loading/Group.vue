@@ -30,10 +30,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'LoadingGroup',
-});
-
 const props = defineProps({
   pending: {
     type: Boolean,

@@ -14,11 +14,7 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'ImageNav'
-})
-
 defineProps({
-  data: Array
-})
+  data: Array,
+});
 </script>

@@ -1,18 +1,19 @@
 <template>
   <n-carousel show-arrow class="mb-6" autoplay>
-    <img v-for="(item, index) in data" :key="index" class="carousel-img rounded cursor-pointer" :src="item.src"
-      @click="$commonOpen(item)">
+    <img
+      v-for="(item, index) in data"
+      :key="index"
+      class="carousel-img rounded cursor-pointer"
+      :src="item.src"
+      @click="$commonOpen(item)"
+    />
   </n-carousel>
 </template>
 
 <script setup>
-defineOptions({
-  name: 'Banner'
-})
-
 defineProps({
-  data: Array
-})
+  data: Array,
+});
 </script>
 
 <style scoped>

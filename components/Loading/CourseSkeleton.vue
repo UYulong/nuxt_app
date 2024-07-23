@@ -11,9 +11,3 @@
     </n-grid-item>
   </n-grid>
 </template>
-
-<script setup>
-defineOptions({
-  name: 'LoadingCourseSkeleton',
-});
-</script>

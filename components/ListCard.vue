@@ -13,10 +13,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'ListCard',
-});
-
 const props = defineProps({
   title: String,
   data: Array,

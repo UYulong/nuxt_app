@@ -11,10 +11,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'CountDown',
-});
-
 const props = defineProps({
   time: {
     type: [String, Number],

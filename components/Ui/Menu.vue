@@ -3,9 +3,3 @@
     <slot />
   </div>
 </template>
-
-<script setup>
-defineOptions({
-  name: 'UiMenu',
-});
-</script>

@@ -20,10 +20,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'PageIndex',
-});
-
 useHead({
   title: 'Nuxt App Index',
   meta: [

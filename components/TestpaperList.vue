@@ -21,10 +21,6 @@
 <script setup>
 import { createDiscreteApi } from 'naive-ui';
 
-defineOptions({
-  name: 'TestpaperList',
-});
-
 const props = defineProps({
   item: Object,
 });

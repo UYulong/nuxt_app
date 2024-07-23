@@ -31,10 +31,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'PagePaper',
-});
-
 const { page, limit, total, handlePageChange, rows, pending, error, refresh } =
   await usePage(({ page, limit }) => {
     return useListApi('testpaper', {

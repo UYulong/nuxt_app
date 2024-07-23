@@ -11,9 +11,5 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'HotCourseList',
-});
-
 const { data } = await useHotCourseListApi();
 </script>

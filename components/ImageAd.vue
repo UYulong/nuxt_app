@@ -9,10 +9,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'ImageAd',
-});
-
 defineProps({
   data: Array,
 });

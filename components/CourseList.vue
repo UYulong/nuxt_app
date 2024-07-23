@@ -36,10 +36,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'CourseList',
-});
-
 const props = defineProps({
   item: Object,
 });

@@ -5,9 +5,3 @@
     <n-skeleton text style="width: 60%" />
   </n-card>
 </template>
-
-<script setup>
-defineOptions({
-  name: 'LoadingSkeleton'
-})
-</script>

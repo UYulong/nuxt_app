@@ -5,10 +5,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'UiMenuItem',
-});
-
 defineProps({
   active: {
     type: Boolean,

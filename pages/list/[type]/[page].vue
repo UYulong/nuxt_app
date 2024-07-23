@@ -38,10 +38,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'PageList',
-});
-
 const route = useRoute();
 const { type } = route.params;
 const title = route.meta.title;

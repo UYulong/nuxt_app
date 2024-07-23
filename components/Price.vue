@@ -9,10 +9,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'Price',
-});
-
 defineProps({
   value: {
     type: [String, Number],

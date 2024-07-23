@@ -8,10 +8,6 @@
 </template>
 
 <script setup>
-defineOptions({
-  name: 'UiImage',
-});
-
 defineProps({
   src: String,
 
