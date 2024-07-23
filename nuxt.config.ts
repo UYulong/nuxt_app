@@ -28,12 +28,16 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  // "nuxtjs-naive-ui" 会覆盖 plugins/naive-ui.ts
-  modules: ['nuxt-windicss'],
+  // 'nuxt-windicss', "nuxtjs-naive-ui" 会覆盖 plugins/naive-ui.ts
+  modules: ['@unocss/nuxt'],
 
   css: [
     "@/assets/main.css"
   ],
+
+  unocss: {
+    nuxtLayers: true,
+  },
 
   imports: {
     dirs: ["apis"]
