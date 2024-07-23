@@ -1,17 +1,11 @@
 <template>
-  <div class="menu">
+  <div class="flex items-center px-4">
     <slot />
   </div>
 </template>
 
 <script setup>
 defineOptions({
-  name: 'Menu'
-})
+  name: 'UiMenu',
+});
 </script>
-
-<style>
-.menu {
-  @apply flex items-center px-4;
-}
-</style>
