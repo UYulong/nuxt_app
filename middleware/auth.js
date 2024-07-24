@@ -2,6 +2,7 @@
 import { createDiscreteApi } from "naive-ui";
 
 export default defineNuxtRouteMiddleware((to, from) => {
+  console.log('to: ', to);
   const token = useCookie("token")
   const user = useUser()
 
@@ -17,7 +18,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 
   // 未绑定手机号
   const phone = user.value?.phone
-  if (!phone && route.name != 'bindphone') {
+  if (!phone && to.name != 'bindphone') {
     if (import.meta.client) {
       const { message } = createDiscreteApi(["message"])
       message.error("请先绑定手机号")
