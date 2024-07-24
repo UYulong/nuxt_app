@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   // 'nuxt-windicss', "nuxtjs-naive-ui" 会覆盖 plugins/naive-ui.ts '@nuxtjs/composition-api/module',
-  modules: ['@unocss/nuxt', '@pinia/nuxt'],
+  modules: ['@unocss/nuxt', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt',],
 
   css: ['@/assets/main.css'],
 

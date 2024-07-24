@@ -46,8 +46,10 @@
 <script setup>
 import { Search } from '@vicons/ionicons5';
 import { createDiscreteApi } from 'naive-ui';
+import { useUserStore } from '@/stores/userStore';
 
-const user = useUser();
+const userStore = useUserStore();
+const { user } = storeToRefs(userStore);
 
 const route = useRoute();
 const menus = [

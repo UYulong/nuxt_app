@@ -56,6 +56,7 @@
 </template>
 <script setup>
 import { createDiscreteApi } from 'naive-ui';
+import { useUserStore } from '@/stores/userStore';
 
 const route = useRoute();
 const type = ref('login');
@@ -138,8 +139,12 @@ const onSubmit = () => {
       // 将用户登录成功返回的token存储在cookie当中，用户登录成功的标识
       const token = useCookie('token');
       token.value = data.value.token;
+
       const user = useUser();
       user.value = data.value;
+
+      const userStore = useUserStore();
+      userStore.saveUser(data.value);
 
       // 跳转
       navigateTo(route.query.from || '/', { replace: true });
