@@ -47,8 +47,7 @@
 import { Search } from '@vicons/ionicons5';
 import { createDiscreteApi } from 'naive-ui';
 
-// const user = useUser();
-const user = true;
+const user = useUser();
 
 const route = useRoute();
 const menus = [
@@ -184,7 +183,6 @@ const SearchBarRef = ref(null);
 const openSearch = () => SearchBarRef.value.open();
 
 const handleSelect = (k) => {
-  console.log(k);
   switch (k) {
     case 'logout':
       const { dialog } = createDiscreteApi(['dialog']);
