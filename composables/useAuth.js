@@ -1,4 +1,5 @@
 import { createDiscreteApi } from "naive-ui";
+import { useUserStore } from '@/stores/userStore'
 
 export const useUser = () => useState("user", () => null)
 
@@ -40,8 +41,12 @@ export async function useLogout() {
 export function useHasAuth(callback = null) {
   const route = useRoute()
   const token = useCookie("token")
-  const user = useUser()
+  // const user = useUser()
+  const userStore = useUserStore()
+  const { user } = storeToRefs(userStore)
+
   const { message } = createDiscreteApi(["message"])
+
   // 未登录
   if (!token.value) {
     message.error("请先登录")

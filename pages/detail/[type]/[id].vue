@@ -134,6 +134,7 @@
     </n-grid>
   </LoadingGroup>
 </template>
+
 <script setup>
 import { createDiscreteApi } from 'naive-ui';
 const route = useRoute();

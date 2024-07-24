@@ -1,9 +1,12 @@
 
 import { createDiscreteApi } from "naive-ui";
+import { useUserStore } from '@/stores/userStore'
 
 export default defineNuxtRouteMiddleware((to, from) => {
   const token = useCookie("token")
-  const user = useUser()
+  // const user = useUser()
+  const userStore = useUserStore()
+  const { user } = storeToRefs(userStore)
 
   // 未登录
   if (!token.value) {
