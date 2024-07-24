@@ -123,7 +123,9 @@ const onSubmit = () => {
     loading.value = true;
 
     let { data, error } =
-      type.value === 'login' ? await useLoginApi(form) : await useRegApi(form);
+      type.value === 'login'
+        ? await useLoginApi(markRaw(form))
+        : await useRegApi(markRaw(form));
 
     loading.value = false;
 

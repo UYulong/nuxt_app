@@ -2,7 +2,6 @@
 import { createDiscreteApi } from "naive-ui";
 
 export default defineNuxtRouteMiddleware((to, from) => {
-  console.log('to: ', to);
   const token = useCookie("token")
   const user = useUser()
 

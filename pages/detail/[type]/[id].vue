@@ -34,7 +34,8 @@
         class="image"
         :class="{ 'book-image': type === 'book' }"
       />
-      <div class="info">
+
+      <div class="info ml-[20px]">
         <div class="flex flex-col items-start">
           <div class="flex items-center">
             <span class="text-xl mr-2">{{ data.title }}</span>
