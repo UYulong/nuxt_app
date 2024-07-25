@@ -18,6 +18,7 @@
     "nuxt": "^3.12.4",
     "nuxtjs-naive-ui": "^1.0.2",
     "pinia": "^2.1.7",
+    "qrcode": "^1.5.3",
     "vue": "latest"
   },
   "devDependencies": {
