@@ -5,6 +5,3 @@
     </NuxtLayout>
   </NConfigProvider>
 </template>
-
-<script setup>
-</script>

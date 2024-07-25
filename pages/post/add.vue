@@ -40,9 +40,9 @@
             />
           </n-form-item>
 
-          <!-- <n-form-item>
+          <n-form-item>
             <Uploader v-model="item.images" :max="9" />
-          </n-form-item> -->
+          </n-form-item>
         </div>
 
         <n-form-item>
@@ -65,6 +65,7 @@
     </ClientOnly>
   </div>
 </template>
+
 <script setup>
 import { createDiscreteApi } from 'naive-ui';
 import { Close } from '@vicons/ionicons5';
