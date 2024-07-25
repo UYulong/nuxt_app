@@ -24,12 +24,16 @@ export async function useRefreshUserInfo() {
 // 退出登录
 export async function useLogout() {
   await useLogoutApi()
-  const user = useUser()
-  user.value = null
+
   const token = useCookie("token")
   token.value = null
+
+  const userStore = useUserStore()
+  userStore.clearUser()
+
   const { message } = createDiscreteApi(["message"])
   message.success("退出登录成功")
+
   // 回到首页
   const route = useRoute()
   if (route.path != "/") {
@@ -41,7 +45,7 @@ export async function useLogout() {
 export function useHasAuth(callback = null) {
   const route = useRoute()
   const token = useCookie("token")
-  // const user = useUser()
+
   const userStore = useUserStore()
   const { user } = storeToRefs(userStore)
 
